@@ -14,6 +14,17 @@ function initMap() {
 }
 
 
+// Sticky Menu Background
+window.addEventListener('scroll', function() {
+  if(window.scrollY > 150) {
+    document.querySelector('#navbar').style.opacity = 0.9;
+  } else {
+    document.querySelector('#navbar').style.opacity = 1;
+  }
+});
+
+
+// Smooth Scrolling
 $('#navbar a, .btn').on('click', function(event) {
 
   // Make sure this.hash has a value before overriding default behavior
